@@ -29,6 +29,7 @@
   nav {
     height: .44rem;
     background: #f6f6f6;
+    // border-top: solid 1px #ccc;
     @include border(1px 0 0 0);
     ul {
       height: 100%;

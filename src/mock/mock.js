@@ -1,7 +1,9 @@
-import list from './list.json';
+const list = require('./list.json')
+const refresh = require('./refresh.json')
 
-export default function(){
+module.exports = function() {
   return {
-    list
+    list,
+    refresh
   }
 }
