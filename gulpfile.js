@@ -63,26 +63,16 @@ gulp.task('server', () => {
           target: 'http://localhost:3000',
           changeOrigin: true
         }),
-        proxy('/apj', {
-          target: 'http://recom-s.vancl.com',
+        proxy('/lagou', {
+          target: 'https://m.lagou.com',
           changeOrigin: true,
           pathRewrite: {
-            '/apj': ''
+            '/lagou': ''
           }
         }),
-        proxy('/apj', {
-          target: 'http://recom-s.vancl.com',
-          changeOrigin: true,
-          pathRewrite: {
-            '/apj': ''
-          }
-        }),
-        proxy('/apj', {
-          target: 'http://page.vanclimg.com',
-          changeOrigin: true,
-          pathRewrite: {
-            '/apj': ''
-          }
+        proxy('/apicenter', {
+          target: 'http://localhost:3000',
+          changeOrigin: true
         })
       ]
     }))
