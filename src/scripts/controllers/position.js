@@ -8,6 +8,7 @@ var pageNo = 1
 const render = async () => {
   $('main').html(positionTpl)
   let list = datasource = (await positionModel.list()).content.data.page.result
+  console.log(list)
   await renderList(list)
   scroll()
 }

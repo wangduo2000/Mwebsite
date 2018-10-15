@@ -46,7 +46,10 @@
     left: 0;
   }
   main {
-    @include flex()
+    @include flex();
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
   }
   footer {
     height: .5rem;

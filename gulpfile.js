@@ -16,10 +16,12 @@ gulp.task('packjs', () => {
     .pipe(webpack({
       mode: 'development',
       entry: {
-        app: ['@babel/polyfill', './src/scripts/app.js']
+        app: ['@babel/polyfill', './src/scripts/app.js'],
+        'app-price': ['@babel/polyfill', './src/scripts/app-price.js']
+
       },
       output: {
-        filename: 'app.js'
+        filename: '[name].js'
       },
       module: {
         rules: [
@@ -46,7 +48,10 @@ gulp.task('packjs', () => {
 
 // 编译sass
 gulp.task('packscss', () => {
-  return gulp.src('./src/styles/app.scss')
+  return gulp.src([
+    './src/styles/app.scss',
+    './src/styles/app-price.scss',
+  ])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dev/styles'))
 })
@@ -71,7 +76,11 @@ gulp.task('server', () => {
           }
         }),
         proxy('/apicenter', {
-          target: 'http://localhost:3000',
+          target: 'https://m.kuaidi100.com',
+          changeOrigin: true
+        }),
+        proxy('/tbnetwork', {
+          target: 'https://m.kuaidi100.com',
           changeOrigin: true
         })
       ]

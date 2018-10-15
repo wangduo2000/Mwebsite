@@ -13,7 +13,7 @@ Router.prototype.route = function (hash, cb) {
 
 // 路由刷新
 Router.prototype.refresh = function () {
-  let hash = location.hash || '#position'
+  let hash = location.hash || '#inquire'
   this.currentHash = hash
   this.routes[this.currentHash]()
   this.switchTabbar()
@@ -21,7 +21,7 @@ Router.prototype.refresh = function () {
 
 // tabbar switch
 Router.prototype.switchTabbar = function () {
-  let hashs = ['#position', '#sendexpress', '#more', '#profile']
+  let hashs = ['#inquire', '#sendexpress', '#more', '#profile']
   let index = hashs.indexOf(this.currentHash) 
   $('footer li')
     .eq(index)
