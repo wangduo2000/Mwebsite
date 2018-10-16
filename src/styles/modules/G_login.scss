@@ -1,0 +1,82 @@
+.form-container{
+    //@include flexbox();
+    width:auto;
+    margin: 0 auto;
+    font-size: .14rem;
+    padding: 0 .2rem 0;
+    h3{
+        margin: .1rem 0;
+        font-size: .16rem;
+        text-align: center;
+        font-weight: normal;
+    }
+    form{
+        background: #FFF;
+        display: block;
+        padding: .1rem .2rem 0;
+        //border: 1px solid #e7ebef;
+        @include border(1px,#e7ebef,solid,null);
+        .form-ctrl{
+            position: relative;
+            padding:.1rem 0;
+            //border-bottom: 1px solid #e7ebef;
+            @include border(0 0 1px 0,#e7ebef,solid,null);
+            input{
+                height:.24rem;
+                font-size: .16rem;
+                width: 100%;
+                background: #FFF;
+                outline: none;
+                border: none;
+                vertical-align: middle;
+            }
+        }
+        
+        
+    }
+    .btn-submit{
+        padding: .08rem 0;
+        height:.34rem;
+        display: block;
+        width: 100%;
+        background: #fd7f24;
+        color: #FFF;
+        text-align: center;
+        font-size: .16rem;
+        outline: none;
+        border: none;
+        margin-top: .1rem;
+        //border-radius: 3px;
+        @include border-radius(.03rem); 
+        cursor: pointer;
+    } 
+    .type{
+        padding: .1rem;
+        height:.22rem;
+        .bd{
+            text-align: left;
+        }
+        .fr{
+            text-align: right;
+        }
+    }
+    .divide{
+        color: #888;
+        margin: .3rem 0;
+        text-align: center;
+        position: relative;
+        //border-top: 1px dashed #888;
+        @include border(1px 0 0 0,#888,dashed,null);
+        span{
+            position: absolute;
+            left: 50%;
+            top: -1em;
+            background: #f7fafc;
+            padding: 0 10px;
+            margin-left: -2.2em;
+            z-index: 100;
+
+        }
+    }
+    
+}

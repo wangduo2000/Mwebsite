@@ -17,8 +17,9 @@ gulp.task('packjs', () => {
       mode: 'development',
       entry: {
         app: ['@babel/polyfill', './src/scripts/app.js'],
-        'app-price': ['@babel/polyfill', './src/scripts/app-price.js']
+        'app-price': ['@babel/polyfill', './src/scripts/app-price.js'],
 
+       'G_user':['@babel/polyfill', './src/scripts/G_user.js']
       },
       output: {
         filename: '[name].js'
@@ -51,6 +52,7 @@ gulp.task('packscss', () => {
   return gulp.src([
     './src/styles/app.scss',
     './src/styles/app-price.scss',
+    './src/styles/G_user.scss',
   ])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dev/styles'))
