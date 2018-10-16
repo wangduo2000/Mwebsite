@@ -64,10 +64,6 @@ gulp.task('server', () => {
       port: 8080,
       livereload: true,
       middleware: [
-        proxy('/api', {
-          target: 'http://localhost:3000',
-          changeOrigin: true
-        }),
         proxy('/lagou', {
           target: 'https://m.lagou.com',
           changeOrigin: true,
@@ -77,7 +73,10 @@ gulp.task('server', () => {
         }),
         proxy('/apicenter', {
           target: 'https://m.kuaidi100.com',
-          changeOrigin: true
+          changeOrigin: true,
+          pathRewrite: {
+            'price.html/apicenter': '/apicenter'
+          }
         }),
         proxy('/tbnetwork', {
           target: 'https://m.kuaidi100.com',

@@ -1539,7 +1539,19 @@ const loadCity = (code) => {
   })
 }
 
+const loadPrice = (code) => {
+  return $.ajax({
+    type: 'POST',
+    url: '/apicenter/kdquerytools.do',
+    data: code,
+    success: (result) => {
+      return result;
+    }
+  })
+}
+
 export default {
   priceArea,
-  loadCity
+  loadCity,
+  loadPrice
 }
