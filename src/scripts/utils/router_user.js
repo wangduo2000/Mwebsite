@@ -15,13 +15,14 @@ function Router() {
   Router.prototype.refresh = function () {
     let hash = location.hash || '#login'
     this.currentHash = hash
-    this.routes[this.currentHash]()
+    //this.routes[this.currentHash]()
     this.switchTabbar()
   }
   
   // tabbar switch
   Router.prototype.switchTabbar = function () {
     let hashs = ['#login','#resign']
+    //let index = hashs.indexOf(this.currentHash) 
   }
   
   // 路由切换监听
