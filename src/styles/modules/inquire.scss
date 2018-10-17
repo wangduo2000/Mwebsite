@@ -40,18 +40,12 @@
           }
         }
         > div:nth-child(2) {
-          @include flex();
+          width: .55rem;
           background: #3278e6;
           height: .41rem;
           padding: 0 .16rem;
-
-          span {
-            font-size: .28rem;
-            
-            i {
-              color: #fff;
-            }
-          }
+          font-size: .28rem;
+          color: #fff;
         }
       }
       .inq-four {
