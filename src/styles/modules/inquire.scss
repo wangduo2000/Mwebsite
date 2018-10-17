@@ -15,6 +15,7 @@
       .inq-expressnum {
         margin: .16rem .1rem;
         height: .41rem;
+        padding: 0;
         @include border(1px , #3278e6 , solid);
         @include flexbox();
 
