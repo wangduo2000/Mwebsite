@@ -22,6 +22,7 @@ function Router() {
   // tabbar switch
   Router.prototype.switchTabbar = function () {
     let hashs = ['#login','#resign']
+    //let index = hashs.indexOf(this.currentHash) 
   }
   
   // 路由切换监听

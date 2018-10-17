@@ -1,0 +1,31 @@
+.form-container{
+    //@include flexbox();
+    width:auto;
+    margin: 0 auto;
+    font-size: .14rem;
+    padding: 0 .2rem 0;
+    .form{
+        background: #FFF;
+        display: block;
+        padding: .1rem .2rem 0;
+        //border: 1px solid #e7ebef;
+        @include border(1px,#e7ebef,solid,null);
+        .form-ctrl{
+            position: relative;
+            padding:.1rem 0;
+            //border-bottom: 1px solid #e7ebef;
+            @include border(0 0 1px 0,#e7ebef,solid,null);
+            input{
+                height:.24rem;
+                font-size: .16rem;
+                width: 100%;
+                background: #FFF;
+                outline: none;
+                border: none;
+                vertical-align: middle;
+            }
+        }
+        
+        
+    }
+}
