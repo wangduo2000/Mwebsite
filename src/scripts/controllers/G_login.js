@@ -1,14 +1,16 @@
 import login from '../views/G_login.html'
+
 const render = () => {
-  document.querySelector('.form-container').innerHTML = login
-  clickUser1()
+  $('.form-container').html(login)
+  clickUser()
 
 }
-const clickUser1 = () => {
+const clickUser = () => {
   $('#type a').on('tap', function () {
     let hashs = ['#login',"#resign"]
     location.hash = hashs[$(this).index()]
     console.log(hashs[$(this).index()])
+    $(this).addClass('active').siblings().removeClass('active')
 
   })
 }

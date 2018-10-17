@@ -15,7 +15,7 @@ function Router() {
   Router.prototype.refresh = function () {
     let hash = location.hash || '#login'
     this.currentHash = hash
-    //this.routes[this.currentHash]()
+    this.routes[this.currentHash]()
     this.switchTabbar()
   }
   
