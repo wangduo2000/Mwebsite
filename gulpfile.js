@@ -17,8 +17,9 @@ gulp.task('packjs', () => {
       mode: 'development',
       entry: {
         app: ['@babel/polyfill', './src/scripts/app.js'],
-        'app-price': ['@babel/polyfill', './src/scripts/app-price.js']
+        'app-price': ['@babel/polyfill', './src/scripts/app-price.js'],
 
+       'G_user':['@babel/polyfill', './src/scripts/G_user.js']
       },
       output: {
         filename: '[name].js'
@@ -51,6 +52,7 @@ gulp.task('packscss', () => {
   return gulp.src([
     './src/styles/app.scss',
     './src/styles/app-price.scss',
+    './src/styles/G_user.scss',
   ])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dev/styles'))
@@ -64,10 +66,6 @@ gulp.task('server', () => {
       port: 6610,
       livereload: true,
       middleware: [
-        proxy('/api', {
-          target: 'http://localhost:3000',
-          changeOrigin: true
-        }),
         proxy('/lagou', {
           target: 'https://m.lagou.com',
           changeOrigin: true,
@@ -77,7 +75,10 @@ gulp.task('server', () => {
         }),
         proxy('/apicenter', {
           target: 'https://m.kuaidi100.com',
-          changeOrigin: true
+          changeOrigin: true,
+          pathRewrite: {
+            'price.html/apicenter': '/apicenter'
+          }
         }),
         proxy('/tbnetwork', {
           target: 'https://m.kuaidi100.com',

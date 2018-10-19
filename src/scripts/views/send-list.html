@@ -1,0 +1,25 @@
+{{#each list}}
+<li style="background:url('https://cdn.kuaidi100.com/images/all/card/bg/{{kuaidicom}}.png')">
+      <div class="left">
+          <div>
+            {{#each comlist}}
+            <img src="{{logo}}">
+            {{/each}}
+            <img src="https://cdn.kuaidi100.com/images/all/36/more_logo.png">
+          </div>
+          <div class="name">{{mktName}}</div>
+          <div>
+            {{#each taglist}}
+            <span>{{this}}</span>
+            {{/each}}
+          </div>
+        </div>
+        <div class="right">
+          <img src="https://cdn.kuaidi100.com/images/wxapp/kuaidi100/icoKuaidi100Courier_2.png">
+          <p>订单数：{{ordertotalStr}}/月</p>
+          <p>收件率：{{acceptrate}}%</p>
+        </div>
+  
+    
+  </li>
+{{/each}}

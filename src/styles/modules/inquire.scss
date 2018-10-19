@@ -15,6 +15,7 @@
       .inq-expressnum {
         margin: .16rem .1rem;
         height: .41rem;
+        padding: 0;
         @include border(1px , #3278e6 , solid);
         @include flexbox();
 
@@ -40,18 +41,12 @@
           }
         }
         > div:nth-child(2) {
-          @include flex();
+          width: .55rem;
           background: #3278e6;
           height: .41rem;
           padding: 0 .16rem;
-
-          span {
-            font-size: .28rem;
-            
-            i {
-              color: #fff;
-            }
-          }
+          font-size: .28rem;
+          color: #fff;
         }
       }
       .inq-four {
