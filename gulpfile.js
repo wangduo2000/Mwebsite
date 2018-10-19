@@ -61,7 +61,7 @@ gulp.task('server', () => {
   return gulp.src('./dev')
     .pipe(server({
       host: 'localhost',
-      port: 8080,
+      port: 6610,
       livereload: true,
       middleware: [
         proxy('/api', {
@@ -83,6 +83,7 @@ gulp.task('server', () => {
           target: 'https://m.kuaidi100.com',
           changeOrigin: true
         })
+
       ]
     }))
 })
