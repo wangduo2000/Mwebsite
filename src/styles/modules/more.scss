@@ -1,49 +1,50 @@
-.more_main{
-    position: relative;
-    background: #efeff4;
-    .more_list{
-        background: #fff;
-        display: flex;
-        flex-wrap: wrap;
-        a{
-            display: block;
-            width: 50%;
-            box-sizing: border-box;
-            padding: 0.25rem 0;
-            font-size: 16px;
-            text-align: center;
-            color: #333;
-            border-bottom: 1px solid #f4f4f4;
-            &::before{
-                display: block;
-                width: 0.26rem;
-                height: 0.26rem;
-                content: '';
-                margin: 0 auto 0.08rem;
-                background-image: url(//cdn.kuaidi100.com/images/m/icons/more.png?verion=7);
-                background-size: 26px auto;
+#root{
+    .home-container{
+        main{
+            .more_list{
+                height: 327px;
+                background: #fff;
+                display: flex;
+                flex-wrap: wrap;
+                a{
+                    display: block;
+                    width: 50%;
+                    box-sizing: border-box;
+                    padding: 0.25rem 0;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #333;
+                    border-bottom: 1px solid #f4f4f4;
+                    &::before{
+                        display: block;
+                        width: 0.26rem;
+                        height: 0.26rem;
+                        content: '';
+                        margin: 0 auto 0.08rem;
+                        background-image: url(//cdn.kuaidi100.com/images/m/icons/more.png?verion=7);
+                        background-size: 26px auto;
+                    }
+                    &.more_price::before{
+                        background-position: 0 0 ;
+                    }
+                    &.more_all::before{
+                        background-position: 0 -29px;
+                    }
+                    &.more_global::before{
+                        background-position: 0 -91px;
+                    }
+                    &.more_net::before{
+                        background-position: 0 -58px;
+                    }
+                    &.more_download::before{
+                        background-position: 0 -120px;
+                    }
+                    &.more_import::before{
+                        background-position: 0 -151px;
+                    }
+                }
             }
-            &.more_price::before{
-                background-position: 0 0 ;
-            }
-            &.more_all::before{
-                background-position: 0 -29px;
-            }
-            &.more_global::before{
-                background-position: 0 -91px;
-            }
-            &.more_net::before{
-                background-position: 0 -58px;
-            }
-            &.more_download::before{
-                background-position: 0 -120px;
-            }
-            &.more_import::before{
-                background-position: 0 -151px;
-            }
+            
         }
-
-
-
     }
 }
