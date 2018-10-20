@@ -2,6 +2,13 @@ import moreTpl from '../views/more.html'
 
 const render = () => {
   $('main').html(moreTpl)
+  more_click()
+}
+
+const more_click = () =>{
+  $('.more_price').on('click',function(e){
+    location.href = '/price.html'
+  })
 }
 
 export default {
