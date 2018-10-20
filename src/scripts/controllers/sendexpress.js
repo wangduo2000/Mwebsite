@@ -4,11 +4,11 @@ import sendModel from '../models/send'
 
 const render = async () => {
   $('main').html(sendexpressTpl);
-  let list =(await sendModel.list()).data;
-  // let imgs =(await sendModel.list()).data.comlist;
+  let list = (await sendModel.list()).data;
   console.log(list);
   await renderList(list);
   $(document).ready(loading());
+  changeTab();
 }
 
 const renderList = async (list) => {
@@ -17,8 +17,18 @@ const renderList = async (list) => {
   $('#ul').html(html)
 }
 
-let loading = ()=>{
-  $('#loading').css("display","none");
+let loading = () => {
+  $('#loading').css("display", "none");
+}
+
+const changeTab = () => {
+  $('#ul li').on('tap', function () {
+
+
+    console.log(location.href)
+    location.href = location.href.split("#")[0] + "?id=" + $(this).index() + '#detail';
+    // location.hash = '#detail'
+  })
 }
 
 export default {
