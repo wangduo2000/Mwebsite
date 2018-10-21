@@ -1,0 +1,374 @@
+<div class="detail-header">
+    <div class="detail-tit">
+        <div class="yo-ico" id="detail-back">&#xe679;</div>
+        <div>寄件服务</div>
+        <div class="yo-ico" id="detail-menu">&#xe684;</div>
+    </div>
+    <div class="detail-home">
+        <ul>
+            <li class="active">
+                <div>
+                    <i class="yo-ico">&#xe65c;</i>
+                </div>
+                <div>
+                    <b>回到首页</b>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="yo-ico">&#xe671;</i>
+                </div>
+                <div>
+                    <b>寄快递</b>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="yo-ico">&#xe729;</i>
+                </div>
+                <div>
+                    <b>更多功能</b>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="yo-ico">&#xe7d5;</i>
+                </div>
+                <div>
+                    <b>个人中心</b>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="main" class="container" style="border-top: 1px solid transparent;">
+    <div class="main">
+
+        <div class="mt10">
+            <div class="detail-wrap">
+                <div class="avatar">
+                    <span class="img"></span>
+                    <p class="star-wrap">
+                        <span class="star">★</span>
+                        <span>{{score}}</span>
+                    </p>
+                </div>
+                <div class="detail-info">
+                    <div class="name">
+                        <h4>{{mktName}}</h4>
+
+                    </div>
+                    <p class="addr">{{address}}</p>
+                    <p>电话：<span style="color:red;background: #fff;font-size: .14rem;">{{phone}}</span></p>
+                    <p class="tags">
+                        {{#each taglist}}
+                        <span>{{this}}</span>
+                        <!-- <span class="">1小时上门</span> -->
+                        {{/each}}
+                    </p>
+                </div>
+                <a class="go-list">></a>
+            </div>
+
+            <div class="go-login">获取快递100收寄件地址或寄公司件 点此登录</div>
+
+            <div>
+                <section class="form">
+                    <div class="contacts send bbf input">
+                        <i></i>
+                        <div class="book">
+                            <p>
+                                <input type="text" placeholder="请输入寄件人信息(出发地)" class="placeholder"></p>
+                            <p style="display: none;">
+                                <span class="textarea">undefined</span></p>
+                            <i style="display: none;"></i>
+                        </div>
+                    </div>
+                    <div class="contacts rec input">
+                        <i></i>
+                        <div class="book">
+                            <p><input type="text" readonly="readonly" placeholder="请输入收件人信息(目的地)" onfocus="this.blur()"
+                                    class="placeholder"></p>
+                            <p style="display: none;"><span class="textarea">undefined</span></p> <i style="display: none;"></i>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <section class="arrow">
+                    <div class="com-title">请选择快递公司</div>
+                    <div class="com-show">
+                        {{#each comlist}}
+                        <span style="background-image: url({{logo}});"></span>
+
+                        {{/each}}
+                    </div>
+                </section>
+            </div>
+
+            <div>
+                <section class="info">
+                    <div class="contacts">
+                        <p><label>物品信息：</label> <input type="text" placeholder="必填"></p>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <section class="info msg">
+                    <div class="contacts">
+                        <p><label style="width: 7em;">给快递员留言：</label> <input type="text" placeholder="选填"></p>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <section class="phone">
+                    <div class="contacts">
+                        <div>
+                            <p><label>您的手机：</label><input type="text" placeholder="请输入验证手机"> <a class="b-btn">获取验证码</a></p>
+                            <p><label>验证码：</label><input type="text" placeholder="输入手机验证码" class="bt"></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="order">
+                <a>点我下单</a>
+            </div>
+            <div style="height:.40rem;"></div>
+        </div>
+    </div>
+
+</div>
+
+<!--
+                
+                
+                <section class="form arrow">
+                    <div class="com-title">请选择快递公司</div>
+                    <div class="com-show"><span style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/ems.png&quot;);"></span><span
+                            style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/shentong.png&quot;);"></span><span
+                            style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/zhongtong.png&quot;);"></span><span
+                            style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/debangwuliu.png&quot;);"></span></div>
+                </section>
+                
+                
+                
+                <div class="text-normal-right" style="display: none;">收不到验证码？点此获取语音验证码</div> <a class="a-submit">点我下单</a>
+            </div>
+            <div class="pop-box slide-view">
+                <div class="addr-search">
+                    <div class="search-input-wrap"><i class="search"></i> <input type="text" placeholder="电话或姓名关键字"></div>
+                    <span class="active">全部</span> <span class="">收件人</span> <span class="">寄件人</span>
+                </div>
+                <section class="contact-list"><input type="hidden">
+                    <ul></ul>
+                </section>
+            </div>
+            <div class="slide-view view-footer-fix"><a>添加新地址</a></div>
+            <div class="slide-view view-footer-fix" style="z-index: 1116;"><a>保存</a></div>
+            <div class="pop-box slide-view" style="z-index: 1115;">
+                <section class="add-box nomt">
+                    <p><label>姓名：</label><input type="text" placeholder="请输入姓名"></p>
+                    <p><label>手机号码：</label><input type="text" placeholder="请输入手机号码"></p>
+                    <p class="link"><label>选择地区：</label><span id="areapick" class="input placeholder">请选择地区</span></p>
+                    <p><label>详细地址：</label><textarea placeholder="请输入详细地址"></textarea></p>
+                    <div>
+                        <h4>↓&nbsp;<span class="">粘贴整段内容，自动识别姓名、号码、地址</span>&nbsp;↓</h4>
+                        <p><textarea placeholder="请将您复制的包含地址、联系方式的内容粘贴到此，即可智能识别。如：张三，13800138000，广东省深圳市南山区科技南十二路金蝶软件园"
+                                class="text-l"></textarea></p>
+                    </div>
+                </section>
+                <section><a class="a-del" style="display: none;">删除地址</a></section>
+            </div>
+            <div class="pop-box comments slide-view">
+                <div class="detail-wrap">
+                    <div class="avatar"><span style="background-image: url(&quot;https://cdn.kuaidi100.com/images/wxapp/kuaidi100/icoKuaidi100Courier_2.png&quot;);"></span>
+                        <div class="star-wrap"><i class="star">★</i> <b>4.7</b></div>
+                    </div>
+                    <div class="detail-info">
+                        <div class="name">
+                            <h4>只收大货全国3-4元</h4><a href="tel:18910325209" class="tel"></a>
+                        </div>
+                        <p class="addr">北京北京东城区区亲.小件千万别下单。我司只取重货大货行李搬家，冰箱洗衣机电动车等特货均能运输。和国际件，国内小件一律不取，如若强制下单一律取消，大货价格很优惠。可以电话咨询</p>
+                        <p class="tags"><span class="mark">免手写面单</span><span class="">1小时上门</span></p>
+                    </div>
+                </div>
+                <ul class="comment-list">
+                    <li>
+                        <div class="head"><span class="avatar" style="background-image: url(&quot;https://p.kuaidi100.com/mobile/mobileapi.do?method=download&quot;);"></span>
+                            <span class="name">匿名用户</span> <span class="score"><i>★★★★★</i><b>5</b>分</span></div>
+                        <div class="content">专业有礼貌,按承诺服务,提供有效快递凭证</div>
+                    </li>
+
+                </ul>
+                <div class="comment-txt">已加载所有评论</div>
+            </div>
+            <div class="pop-box slide-view">
+                <ul class="com-list">
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/ems.png&quot;);"></div>
+                        <div class="info">
+                            <h4>EMS</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/shentong.png&quot;);"></div>
+                        <div class="info">
+                            <h4>申通</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/zhongtong.png&quot;);"></div>
+                        <div class="info">
+                            <h4>中通</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/debangwuliu.png&quot;);"></div>
+                        <div class="info">
+                            <h4>德邦快递-特准快件</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/ane66.png&quot;);"></div>
+                        <div class="info">
+                            <h4>安能快递</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/jd.png&quot;);"></div>
+                        <div class="info">
+                            <h4>京东</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/huitongkuaidi.png&quot;);"></div>
+                        <div class="info">
+                            <h4>百世</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo" style="background-image: url(&quot;https://cdn.kuaidi100.com/images/all/56/dayangwuliu.png&quot;);"></div>
+                        <div class="info">
+                            <h4>大洋</h4>
+                            <div class="price" style="display: none;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="pop-box slide-view">
+                <div class="form"><label>是否保价：</label>
+                    <div class="radio"><input type="radio" id="valins" name="valins" value="valin"> <label for="valins">保价</label></div>
+                    <div class="radio"><input type="radio" id="novalins" name="valins" value="novalin"> <label for="novalins">不保价</label></div>
+                </div>
+                <div class="form" style="display: none;"><label>保价金额：</label> <input type="number" placeholder="如需保价请填写"></div>
+                <div class="view-footer">
+                    <div class="btn">确定</div>
+                </div>
+            </div>
+            <div class="pop-box slide-view">
+               
+                <div class="form" style="display: none;"><label>所在公司：</label> <input type="text"></div>
+                <div class="form" style="display: none;"><label>所在部门：</label> <input type="text"></div>
+                <div class="form"><label>付款方式：</label>
+                    <div class="radio" style="display: none;"><input type="radio" id="month" name="payment" value="MONTHLY">
+                        <label for="month">月结</label></div>
+                    <div class="radio"><input type="radio" id="shipper" name="payment" value="SHIPPER"> <label for="shipper">寄付</label></div>
+                    <div class="radio" style="display: none;"><input type="radio" id="consignee" name="payment" value="CONSIGNEE">
+                        <label for="consignee">到付</label></div>
+                </div>
+                <div class="view-footer">
+                    <div class="btn">确定</div>
+                </div>
+            </div>
+            <div class="pop-box slide-view">
+                <div class="info-wrap">
+                    <div class="item">
+                        <div class="title">物品名称：</div>
+                        <div class="taglist"><span class="">文件</span><span class="">生活用品</span><span class="">电子产品</span><span
+                                class="">服饰</span><span class="">食品</span> </div> <input type="text" placeholder="其他，请输入具体名称">
+                        <div class="a-text"><a>什么物品不可以寄？</a></div>
+                    </div>
+                    <div class="item">
+                        <div class="title">物品重量：</div>
+                        <div class="taglist sl"><span class="">0.5kg</span><span class="">1kg</span><span class="">1.5kg</span><span
+                                class="">2kg</span><span class="">2.5kg</span><span class="">3kg</span></div> <input
+                            type="text" placeholder="其他，请输入具体的重量">
+                    </div>
+                    <div class="item">
+                        <div class="title">物品数量：</div>
+                        <div class="taglist sl"><span class="">1</span><span class="">2</span><span class="">3</span><span
+                                class="">4</span><span class="">5</span><span class="">6</span><span class="">7</span></div>
+                        <input type="text" placeholder="其他，请输入具体的数量">
+                    </div>
+                </div>
+                <div class="view-footer">
+                    <div class="btn">确定</div>
+                </div>
+            </div>
+            <div class="select-box" style="z-index: 6666; display: none;">
+                <div class="actionsheet">
+                    <div class="title">请选择公司名称</div>
+                    <ul></ul>
+                    <div class="cancel">取消</div>
+                </div>
+            </div>
+            <div class="select-box" style="display: none;">
+                <div class="select-dialog" style="transform: translate3d(0px, 100%, 0px);">
+                    <h2>给快递员留言<span class="complete">确定</span></h2>
+                    <div class="dialog-body"><textarea placeholder="如：取件地址信息，什么时候来取件，如何联系等，限30字"></textarea>
+                        <p class="tip">选中一个标签，自动填充到输入框中</p>
+                        <div class="item-list"><span class="">按寄件地址来取件</span><span class="">到了打电话</span><span class="">不方便接电话</span><span
+                                class="">缺少包装</span><span class="">上午来取件</span><span class="">下午来取件</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loading" style="display: none;">
+                <div class="loading-box">
+                    <p><img src="https://cdn.kuaidi100.com/images/smart/order/loading.gif" class="img-loading"></p>
+                    <p>奋力加载中...</p>
+                </div>
+            </div>
+            <div id="contraband" class="help-frame">
+                <div class="help-container">
+                    <div class="help-wrap">
+                        <h3>一些物品的快递建议：</h3>
+                        <div>
+                            证件建议走EMS或顺丰；香烟不能超过两条；
+                            电池、鞭炮、蜡烛、刀具、液体、粉末、易碎品、古董、金银等贵重物品以及易坏的食品等很多快递公司不收，<strong>下单前务必联系快递员确认。</strong></div>
+                    </div>
+                    <div class="help-wrap">
+                        <h3>以下是国家邮政总局发布的《禁止寄递物品指导目录》：</h3>
+                        <ul>
+                            <li>一、枪支（含仿制品、主要零部件）、弹药（含仿制品）</li>
+                            <li>二、管制器具，含各类管制刀具、弩、催泪器、催泪枪、电击器等</li>
+                            <li>三、爆炸物品，含爆破器材、烟花爆竹等</li>
+                            <li>四、压缩和液化气体及其容器，含易燃气体（包括打火机），有毒气体，易爆或者窒息、助燃气体等</li>
+                            <li>五、易燃液体，如汽油、柴油、煤油、桐油、丙酮、乙醚、油漆、生漆、苯、酒精、松香油等</li>
+                            <li>六、易燃固体、自燃物质、遇水易燃物质，如红磷、硫磺、铝粉、闪光粉、固体酒精、火柴、活性炭等</li>
+                            <li>七、氧化剂和过氧化物</li>
+                            <li>八、毒性物质</li>
+                            <li>九、生化制品、传染性、感染性物质</li>
+                            <li>十、放射性物质</li>
+                            <li></li>
+                            <li>十一、腐蚀性物质，如硫酸、硝酸、盐酸、蓄电池、氢氧化钠、氢氧化钾等</li>
+                            <li>十二、毒品及吸毒工具、非正当用途麻醉药品和精神药品、非正当用途的易制毒化学品</li>
+                            <li>十三、非法出版物、印刷品、音像制品等宣传品</li>
+                            <li>十四、间谍专用器材，如暗藏式窃听器材、窃照器材等</li>
+                            <li>十五、非法伪造物品，如伪造或者变造的货币、证件、公章等</li>
+                            <li>十六、侵犯知识产权和假冒伪劣物品</li>
+                            <li>十七、濒危野生动物及其制品，如象牙、虎骨、犀牛角及其制品等</li>
+                            <li>十八、禁止进出境物品</li>
+                            <li>十九、其他国家法律、法规禁止寄递的物品</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
