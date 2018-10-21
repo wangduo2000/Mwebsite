@@ -1,18 +1,21 @@
     <div class="form">
         <div class="form-ctrl">
-            <input type="text" placeholder="请输入手机号/邮箱" name="name" id="name" autocomplete="name" value="">
+            <input type="text" placeholder="请输入用户名" name="name" id="username" autocomplete="name" value="">
         </div>
         <div class="form-ctrl">
-            <input type="text" placeholder="请输入验证码"  ><span class="vcode">验证码</span>
+            <input type="text" class="vco" placeholder="请输入验证码"  ><div class="vcode">点击切换验证码</div>
         </div>
         <div class="form-ctrl">
-                <input type="password" placeholder="请输入不少于六位密码" name="password" id="password" value="">
-        </div>   
+                <input type="password" placeholder="请输入密码"  id="password" value="">
+        </div>
+        <div class="form-ctrl">
+            <input type="password" placeholder="请再次输入密码"  id="password1" value="">
+    </div>   
     </div>
     
-    <button class="btn-submit" id="submit" role="account">注册</button>
+    <button class="btn-submit" id="submit">注册</button>
     <div class="agreement">
-        <i></i>我已阅读并同意
+        <input type="checkbox" checked="checked">我已阅读并同意
         <a href="##" target="_blank">《注册协议》</a>
         和<a href="##" target="_blank">《隐私条例》</a>
     </div>

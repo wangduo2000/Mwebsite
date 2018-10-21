@@ -25,6 +25,19 @@
                 vertical-align: middle;
             }
         }
+        .form-ctrl:nth-child(2){
+            input{
+                display:inline-block;
+                width:50%;
+            }
+            .vcode{
+                display:inline-block;
+                width:50%;
+                height:.24rem;
+                font-size: .16rem;
+            }
+        }
+
         
         
     }
