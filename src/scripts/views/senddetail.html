@@ -17,7 +17,7 @@
     <div class="main">
 
         <div class="mt10">
-            <div class="detail-wrap">
+            <div class="detail-wrap goto">
                 <div class="avatar">
                     <span class="img"></span>
                     <p class="star-wrap">
@@ -106,6 +106,36 @@
                 <a>点我下单</a>
             </div>
             <div style="height:.40rem;"></div>
+
+            <section class="comments pop-box">
+                <div class="detail-wrap back">
+                    <div class="avatar"><span class="img"></span>
+                        <div class="star-wrap"><i class="star">★</i> <b>{{score}}</b></div>
+                    </div>
+                    <div class="detail-info">
+                        <div class="name">
+                            <h4>{{mktName}}</h4>
+                        </div>
+                        <p class="addr">{{address}}</p>
+                        <p>电话：<span style="color:red;background: #fff;font-size: .14rem;">{{phone}}</span></p>
+                        <p class="tags">
+                            {{#each taglist}}
+                            <span>{{this}}</span>
+                            {{/each}}
+                        </p>
+                    </div>
+                    <a class="goback">&lt;</a>
+                </div>
+                <ul class="comment-list">
+                    <li>
+                        <div class="head"><span class="avatar" style="background-image: url(&quot;https://p.kuaidi100.com/mobile/mobileapi.do?method=download&quot;);"></span>
+                            <span class="name">匿名用户</span> <span class="score"><i>★★★★★</i><b>5</b>分</span></div>
+                        <div class="content">专业有礼貌,按承诺服务,提供有效快递凭证</div>
+                    </li>
+
+                </ul>
+                <div class="comment-txt">已加载所有评论</div>
+            </section>
         </div>
     </div>
 
