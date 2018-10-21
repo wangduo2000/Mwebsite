@@ -1,0 +1,26 @@
+{{#each comments}}
+<li>
+    <div class="head">
+        {{#if avatarurl}}
+        <span class="avatar" style="background-image: url(&quot;{{avatarurl}}&quot;);"></span>
+        {{else}}
+        <span class="avatar" style="background-image: url(&quot;https://p.kuaidi100.com/mobile/mobileapi.do?method=download&quot;);"></span>
+        {{/if}}
+
+        {{#if name}}
+        <span class="name">{{name}}</span>
+        {{else}}
+        <span class="name">匿名用户</span>
+        {{/if}}
+        <span class="score">
+            {{#if_star level}}
+            <i>★</i>
+            {{else}}
+            <i>★★★★★</i>
+            {{/if_star}}
+            <b>{{level}}</b>分
+        </span>
+    </div>
+    <div class="content">{{content}}</div>
+</li>
+{{/each}}

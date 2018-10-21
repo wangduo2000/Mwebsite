@@ -2,50 +2,22 @@
     <div class="detail-tit">
         <div class="yo-ico" id="detail-back">&#xe679;</div>
         <div>寄件服务</div>
-        <div class="yo-ico" id="detail-menu">&#xe684;</div>
+        <div class="yo-ico" id="detail-menu"></div>
     </div>
-    <div class="detail-home">
-        <ul>
-            <li class="active">
-                <div>
-                    <i class="yo-ico">&#xe65c;</i>
-                </div>
-                <div>
-                    <b>回到首页</b>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <i class="yo-ico">&#xe671;</i>
-                </div>
-                <div>
-                    <b>寄快递</b>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <i class="yo-ico">&#xe729;</i>
-                </div>
-                <div>
-                    <b>更多功能</b>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <i class="yo-ico">&#xe7d5;</i>
-                </div>
-                <div>
-                    <b>个人中心</b>
-                </div>
-            </li>
-        </ul>
+
+
+</div>
+<div id="loading" class="loading">
+    <div class="loading-box">
+        <p><img src="https://cdn.kuaidi100.com/images/smart/order/loading.gif" class="img-loading"></p>
+        <p>努力奋斗中...</p>
     </div>
 </div>
 <div id="main" class="container" style="border-top: 1px solid transparent;">
     <div class="main">
 
         <div class="mt10">
-            <div class="detail-wrap">
+            <div class="detail-wrap goto">
                 <div class="avatar">
                     <span class="img"></span>
                     <p class="star-wrap">
@@ -70,7 +42,7 @@
                 <a class="go-list">></a>
             </div>
 
-            <div class="go-login">获取快递100收寄件地址或寄公司件 点此登录</div>
+            <div class="go-login"><a href="../../G_user.html">获取快递100收寄件地址或寄公司件 点此登录</a></div>
 
             <div>
                 <section class="form">
@@ -87,8 +59,7 @@
                     <div class="contacts rec input">
                         <i></i>
                         <div class="book">
-                            <p><input type="text" readonly="readonly" placeholder="请输入收件人信息(目的地)" onfocus="this.blur()"
-                                    class="placeholder"></p>
+                            <p><input type="text" placeholder="请输入收件人信息(目的地)" class="placeholder"></p>
                             <p style="display: none;"><span class="textarea">undefined</span></p> <i style="display: none;"></i>
                         </div>
                     </div>
@@ -134,6 +105,31 @@
                 <a>点我下单</a>
             </div>
             <div style="height:.40rem;"></div>
+
+            <section class="comments pop-box">
+                <div class="detail-wrap back">
+                    <div class="avatar"><span class="img"></span>
+                        <div class="star-wrap"><i class="star">★</i> <b>{{score}}</b></div>
+                    </div>
+                    <div class="detail-info">
+                        <div class="name">
+                            <h4>{{mktName}}</h4>
+                        </div>
+                        <p class="addr">{{address}}</p>
+                        <p>电话：<span style="color:red;background: #fff;font-size: .14rem;">{{phone}}</span></p>
+                        <p class="tags">
+                            {{#each taglist}}
+                            <span>{{this}}</span>
+                            {{/each}}
+                        </p>
+                    </div>
+                    <a class="goback">&lt;</a>
+                </div>
+                <ul class="comment-list">
+                    <!-- handelbars -->
+                </ul>
+                <div class="comment-txt">已加载所有评论</div>
+            </section>
         </div>
     </div>
 
