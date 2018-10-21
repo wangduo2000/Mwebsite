@@ -49,7 +49,7 @@ let clickEvent = () => {
       $('.detail-home').css('display', 'block');
     }
     if (target.id == 'detail-back') {
-      location.href = '#sendexpress';
+      location.href = 'http://localhost:8080/#sendexpress';
     }
   })
 
@@ -59,6 +59,8 @@ let clickEvent = () => {
   $('.comments').on("tap", function () {
     $(".comments").css("display", "none");
   })
+
+  $("footer>ul>li:nth-child(2)").addClass("active").siblings().removeClass("active");
 }
 
 
