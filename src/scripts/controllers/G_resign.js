@@ -51,7 +51,7 @@ const clickT = () => {
             } else if ($('#password').val().trim() != $('#password1').val().trim()) {
                 alert('两次密码不一致，请检查！');
                 return false;
-            } else if ($('.vco').val().trim() != $('.vcode').val()) {
+            } else if ($('.vco').val() != $('.vcode').text()) {
                 alert('请保证验证码输入正确!');
                 return false;
             } 
