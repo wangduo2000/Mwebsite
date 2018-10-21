@@ -1,6 +1,15 @@
 .home-container {
     main {
-
+.loading{
+     margin: 0!important;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 60;    background: rgba(0,0,0,0.6);
+        .loading-box {
+            @include flexbox();@include flex-direction(column);@include align(center);
+            width:1.4rem;height:1.6rem;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);margin: 0!important;padding: 1rem;min-width: 6rem;min-height: 6rem;max-width: 8rem;text-align: center;font-size: .875rem;background-color: #fff;border-radius: .05rem;color: #618cc4;min-width: 0;min-height:0;padding:.16rem;
+            p{font-size: .16rem;color: #618cc4;text-align:center;
+                img{width:.6rem;}
+            }
+        }
+    }
 .detail-header{
     .detail-tit {
         height: .4rem;       

@@ -11,17 +11,27 @@ const render = async () => {
   // console.log("list:" + list)
   let template = Handlebars.compile(detailTpl)
   let html = template(list)
-  $('main').html(html)
+  $('main').html(html);
+  $(document).ready(loading());
+  clickEvent();
 }
 
-// const renderList = async (list) => {
+let loading = () => {
+  $('#loading').css("display", "none");
+}
 
-//   // console.log(id)
-//   console.log("list:" + list)
-//   let template = Handlebars.compile(detailTpl)
-//   let html = template({ list })
-//   $('main').html(html)
-// }
+let clickEvent = () => {
+  $('.detail-tit').on('tap', function (e) {
+    let target = e.target;
+    if (target.id == 'detail-menu') {
+      $('.detail-home').css('display', 'block');
+    }
+    if (target.id == 'detail-back') {
+      location.href = '#sendexpress';
+    }
+  })
+}
+
 
 export default {
   render
