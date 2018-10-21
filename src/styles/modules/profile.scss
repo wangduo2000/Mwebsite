@@ -1,109 +1,162 @@
-#root{
-    .home-container{
-        main{
-            .profile_mine{
-                display: -webkit-box;
-                -webkit-box-pack: center;
-                -webkit-box-align: center;
-                box-pack: center;
-                box-align: center;
-                background:url(https://cdn.kuaidi100.com/images/m/ucenter_bg.png?version=5) top center no-repeat #3278e6;
-                background-size: 100% auto;
-                padding: 0.32rem 0.16rem;
-                color: #fff;
-                .profile_avatar{
-                    width: 0.38rem;
-                    height: 0.38rem;
-                    border-radius: 50%;
-                    border: 1px solid #efeff4;
-                    background-size: 100%;
-                    margin-right: 0.16rem;
-                    background-color: rgba(255,240,240,.3);
-                }
-                .profile_infos{
-                    box-flex: 1;
-                }
-                p{
-                    width: 2.7rem;
-                    span{
+.home-container{
+    main{
+        background: #efeff4;
+        .profile_mine{
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            box-pack: center;
+            box-align: center;
+            background:url(https://cdn.kuaidi100.com/images/m/ucenter_bg.png?version=5) top center no-repeat #3278e6;
+            background-size: 100% auto;
+            padding: 0.32rem 0.16rem;
+            color: #fff;
+            .profile_avatar{
+                width: 0.38rem;
+                padding: 0;
+                height: 0.38rem;
+                position: static;
+                border-radius: 50%;
+                border: 1px solid #efeff4;
+                background-size: 100%;
+                margin-right: 0.16rem;
+                background-color: rgba(255,240,240,.3);
+            }
+            .profile_infos{
+                display: block;
+                box-flex: 1;
+                padding: 0;
+                position: static;
+            }
+            p{
+                width: 2.7rem;
+                span{
+                    &:last-child{
                         font-size: 12px;
+                        width: 108px;
+                        height: 21px;
+                        border-radius: 0px;
+                        line-height: 21px;
+                        background: none;
+                        color: #fff;
                     }
-                }
-                &:after{
-                    display:block;
-                    box-sizing: border-box;
-                    width: 0.12rem;
-                    height: 0.12rem;
-                    border-top: 2px solid #fff;
-                    border-right: 2px solid #fff;
-                    content: '';
-                    border-radius: 3px;
-                    transform: rotate(45deg);
                 }
             }
-            .profile_menu-list{
-                ul{
-                    background: #fff;
-                    margin-top: .1rem;
+            &:after{
+                display:block;
+                box-sizing: border-box;
+                width: 0.12rem;
+                height: 0.12rem;
+                border-top: 2px solid #fff;
+                border-right: 2px solid #fff;
+                content: '';
+                border-radius: 3px;
+                transform: rotate(45deg);
+            }
+        }
+        .profile_menu-list{
+            ul{
+                background: #fff;
+                margin-top: .1rem;
+            }
+            li{
+                -webkit-box-flex: 1;
+                padding: 0px;
+                height: .48rem;
+                position: static;
+                color: #333;
+                display: -webkit-box;
+                -webkit-box-align: center;
+                padding-left: 16px;
+                font-size: 0.14rem;  
+                .profile_ico{
+                    position: relative;
+                    width: 0.2rem;
+                    height: 0.2rem;
+                    margin-right: 0.16rem;
+                    background-image: url(https://cdn.kuaidi100.com/images/m/icons/ucenter.png?version=5);
+                    background-size: 18px auto;
+                    background-repeat: no-repeat;
+                    &.profile_point{
+                        background-position: 0 1px;
+                    }
+                    &.profile_coupon{
+                        background-position: 0 -20px;
+                    }
+                    &.profile_add{
+                        background-position: 0 -177px;
+                    }
+                    &.profile_query{
+                        background-position: 0 -201px;
+                    }
+                    &.profile_addr{
+                        background-position: 0 -43px;
+                    }
+                    &.profile_mess{
+                        background-position: 0 -87px;
+                    }
+                    &.profile_help{
+                        background-position: 0 -66px;
+                    }
+                    &.profile_svc{
+                        background-position: 0 -154px;
+                    }
+                    &.profile_about{
+                        background-position: 0 -131px;
+                    }
                 }
-                li{
-                    -webkit-box-flex: 1;
-                    color: #333;
+                .profile_line{
                     display: -webkit-box;
+                    padding: 0 16px 0 0;
+                    border-bottom: 1px solid #efeff4;
+                    -webkit-box-flex: 1;
                     -webkit-box-align: center;
-                    padding-left: 0.16em;
-                    font-size: 0.14rem;
-                    .profile_ico{
-                        position: relative;
-                        width: 0.2rem;
-                        height: 0.2rem;
-                        margin-right: 0.16rem;
-                        background-image: url(https://cdn.kuaidi100.com/images/m/icons/ucenter.png?version=5);
-                        background-size: 18px auto;
-                        background-repeat: no-repeat;
-                        &.profile_point{
-                            background-position: 0 1px;
-                        }
-                        &:after{
-                            position: absolute;
-                            right: -5px;
-                            top: 0;
-                            width: 8px;
-                            height: 8px;
-                            border-radius: 50%;
-                            background: red;
-                            content: '';
+                    div{
+                        width: 301px;
+                        &:first-child{
+                            -webkit-box-flex: 1;
                         }
                     }
-                    .profile_line{
-                        display: -webkit-box;
-                        padding: 0.16em 0.16em 0.16em 0;
-                        border-bottom: 1px solid #efeff4;
-                        -webkit-box-flex: 1;
-                        -webkit-box-align: center;
-                        div{
-                            &:first-child{
-                                -webkit-box-flex: 1;
-                            }
-                        }
-                        &:after{
-                            display: block;
-                            width: 5px;
-                            height: 5px;
-                            border-top: 2px solid #ddd;
-                            border-right: 2px solid #ddd;
-                            content: '';
-                            margin-left: 5px;
-                            transform: rotate(45deg);
-                            border-radius: 2px;
-                        }
+                    &:after{
+                        display: block;
+                        width: 9px;
+                        height: 9px;
+                        border-top: 2px solid #ddd;
+                        border-right: 2px solid #ddd;
+                        content: '';
+                        margin-left: 5px;
+                        transform: rotate(45deg);
+                        border-radius: 2px;
                     }
                 }
-                .profile_place{
-                    color: #aaa;
+
+                div{
+                    &:last-child{
+                        width: 3.27rem;
+                        font-size: 0.14rem;
+                        color: #333;
+                        text-align: left;
+                        line-height: .48rem;
+                    }
+                }
+            }
+            .profile_place{
+                color: #aaa;
+            }
+            .profile_badge{
+                .profile_ico{
+                    &:after{
+                        position: absolute;
+                        right: -5px;
+                        top: 0;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: red;
+                        content: '';
+                    }
                 }
             }
         }
     }
 }
-
