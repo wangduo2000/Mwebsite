@@ -1,7 +1,9 @@
 @import './yo/usage/core/reset';
 @import './modules/G_login.scss';
 @import './modules/G_resign.scss';
-
+body{
+    background:#f7fafc;
+}
 .log-head{
     //@include flexbox();
     margin-top: .3rem;
@@ -36,5 +38,8 @@
     }
     .active{
         display:none;
+    }
+    .fr{
+        float:right;
     }
 }

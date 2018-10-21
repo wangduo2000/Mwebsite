@@ -3,8 +3,9 @@ import resign from '../views/G_resign.html'
 
 const render = () => {
     $('.form-container').html(resign);
-    clickT();
+    
     clickM();
+    clickT();
 }
 
 const clickT = () => {
@@ -50,7 +51,10 @@ const clickT = () => {
             } else if ($('#password').val().trim() != $('#password1').val().trim()) {
                 alert('两次密码不一致，请检查！');
                 return false;
-            }
+            } else if ($('.vco').val().trim() != $('.vcode').val()) {
+                alert('请保证验证码输入正确!');
+                return false;
+            } 
             return true;
         }
 
